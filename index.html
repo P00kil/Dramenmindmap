@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dramen-Mindmap</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .mindmap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .node {
+            background-color: #f0f8ff;
+            padding: 15px;
+            margin: 10px;
+            border: 2px solid #5f9ea0;
+            border-radius: 12px;
+            text-align: center;
+            width: 220px;
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.3s ease;
+        }
+
+        .node:hover {
+            background-color: #e0ffff;
+        }
+
+        .info {
+            display: none;
+            background-color: #ffffff;
+            padding: 10px;
+            border: 1px solid #5f9ea0;
+            border-radius: 8px;
+            width: 250px;
+            margin-top: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .node.active .info {
+            display: block;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .connector {
+            border-left: 2px solid #5f9ea0;
+            height: 20px;
+            width: 2px;
+            margin: 0 auto;
+        }
+
+        .line-horizontal {
+            border-top: 2px solid #5f9ea0;
+            width: 100px;
+            margin: 0 auto;
+        }
+
+        .level {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .mindmap h2 {
+            color: #5f9ea0;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="mindmap">
+    <h2>Dramen-Mindmap</h2>
+
+    <!-- Drama -->
+    <div class="node" onclick="toggleInfo(this)">Drama
+        <div class="info">
+            Definition: Drama ist eine literarische Gattung, die sich auf die Darstellung von Handlungen auf der Bühne konzentriert, oft mit Dialogen und Monologen.
+        </div>
+    </div>
+
+    <div class="connector"></div>
+
+    <!-- Ebene 1: Dramenform, Figuren, Aufbau -->
+    <div class="level">
+        <div class="container">
+            <div class="node" onclick="toggleInfo(this)">Dramenform
+                <div class="info">
+                    Offen: Keine strenge Struktur.<br>Geschlossen: Strikte Struktur mit Einheit von Ort, Zeit und Handlung.
+                </div>
+            </div>
+
+            <div class="node" onclick="toggleInfo(this)">Figuren
+                <div class="info">
+                    Definition: Die Charaktere, die die Handlung vorantreiben, darunter Protagonist und Antagonist.
+                </div>
+            </div>
+
+            <div class="node" onclick="toggleInfo(this)">Aufbau
+                <div class="info">
+                    Definition: Der Aufbau des Dramas, das oft in Akte und Szenen unterteilt ist, die die Handlung voranbringen.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="connector"></div>
+
+    <!-- Ebene 2: Protagonist / Antagonist, Akt / Aufzug -->
+    <div class="level">
+        <div class="container">
+            <div class="node" onclick="toggleInfo(this)">Protagonist / Antagonist
+                <div class="info">
+                    Protagonist: Die Hauptfigur, die den Konflikt führt.<br>Antagonist: Gegenspieler des Protagonisten, der den Konflikt erschwert.
+                </div>
+            </div>
+
+            <div class="node" onclick="toggleInfo(this)">Akt / Aufzug
+                <div class="info">
+                    Definition: Der Hauptabschnitt des Dramas. Das Drama ist meist in 3-5 Akte unterteilt.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="connector"></div>
+
+    <!-- Ebene 3: Szene / Auftritt, Handlung -->
+    <div class="level">
+        <div class="container">
+            <div class="node" onclick="toggleInfo(this)">Szene / Auftritt
+                <div class="info">
+                    Definition: Untereinheit eines Aktes, markiert durch das Erscheinen oder Verschwinden von Figuren.
+                </div>
+            </div>
+
+            <div class="node" onclick="toggleInfo(this)">Handlung
+                <div class="info">
+                    Definition: Der Ablauf der Ereignisse, unterteilt in fünf Akte: Exposition, erregendes Moment, Höhepunkt, fallende Handlung, Lösung/Katastrophe.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="connector"></div>
+
+    <!-- Ebene 4: Exposition, erregendes Moment -->
+    <div class="level">
+        <div class="container">
+            <div class="node" onclick="toggleInfo(this)">Exposition
+                <div class="info">
+                    Definition: Einführung in die Handlung, Vorstellung der Figuren, des Ortes und des zentralen Konflikts.
+                </div>
+            </div>
+
+            <div class="node" onclick="toggleInfo(this)">Erregendes Moment
+                <div class="info">
+                    Definition: Der Punkt, an dem der zentrale Konflikt eskaliert und die Handlung vorantreibt.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="connector"></div>
+
+    <!-- Ebene 5: Höhepunkt, Peripetie -->
+    <div class="level">
+        <div class="container">
+            <div class="node" onclick="toggleInfo(this)">Höhepunkt
+                <div class="info">
+                    Definition: Der dramatische Wendepunkt, an dem sich das Schicksal des Protagonisten entscheidet.
+                </div>
+            </div>
+
+            <div class="node" onclick="toggleInfo(this)">Peripetie
+                <div class="info">
+                    Definition: Die unerwartete Wendung, die das Schicksal der Hauptfigur entscheidend beeinflusst.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="connector"></div>
+
+    <!-- Ebene 6: Fallende Handlung, Lösung / Katastrophe -->
+    <div class="level">
+        <div class="container">
+            <div class="node" onclick="toggleInfo(this)">Fallende Handlung
+                <div class="info">
+                    Definition: Der Konflikt bewegt sich nach dem Höhepunkt auf die Lösung oder Katastrophe zu.
+                </div>
+            </div>
+
+            <div class="node" onclick="toggleInfo(this)">Lösung / Katastrophe
+                <div class="info">
+                    Definition: Auflösung des Konflikts, entweder als Happy End oder als tragische Katastrophe.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="connector"></div>
+
+    <!-- Ebene 7: Konflikt, Botenbericht, Mauerschau -->
+    <div class="level">
+        <div class="container">
+            <div class="node" onclick="toggleInfo(this)">Konflikt
+                <div class="info">
+                    Definition: Zentrales Element des Dramas, meist die Auseinandersetzung zwischen Protagonist und Antagonist.
+                </div>
+            </div>
+
+            <div class="node" onclick="toggleInfo(this)">Botenbericht
+                <div class="info">
+                    Definition: Eine Figur berichtet über ein Ereignis, das außerhalb der Bühne stattfindet, um die Handlung voranzutreiben.
+                </div>
+            </div>
+
+            <div class="node" onclick="toggleInfo(this)">Mauerschau (Teichoskopie)
+                <div class="info">
+                    Definition: Eine Figur beschreibt ein Geschehen, das für das Publikum unsichtbar bleibt, z.B. etwas, das außerhalb der Bühne geschieht.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleInfo(element) {
+        element.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
